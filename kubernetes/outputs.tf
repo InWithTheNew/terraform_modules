@@ -2,8 +2,8 @@ output "kubernetes_storage_rg_name" {
   value = azurerm_resource_group.kubernetes_storage.name
 }
 
-output "default_location" {
-  value = var.default_location
+output "location" {
+  value = var.location
 }
 
 output "client_certificate" {
@@ -13,6 +13,5 @@ output "client_certificate" {
 
 output "kube_config" {
   value = azurerm_kubernetes_cluster.kubernetes.kube_config
-
   sensitive = true
 }

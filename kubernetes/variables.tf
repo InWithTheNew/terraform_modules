@@ -1,4 +1,4 @@
-variable "default_location" {
+variable "location" {
   type    = string
   default = "uksouth"
 }
@@ -7,18 +7,10 @@ variable "kubernetes_rg_name" {
   type    = string
 }
 
-variable "kubernetes_name" {
+variable "name" {
   type = string
 }
 
-variable "environment" {
-  type = string
-}
-
-variable production {
-  type = bool
-  default = false
-}
 variable "kubernetes_storage_rg_name" {
   type    = string
 }
@@ -29,6 +21,7 @@ variable "dns_rg_name" {
 
 variable "default_node_pool_name" {
   type    = string
+  default = "default"
 }
 
 variable "default_node_pool_count" {
@@ -36,7 +29,7 @@ variable "default_node_pool_count" {
   default = 1
 }
 
-variable "default_node_pool_nodeSize" {
+variable "default_node_pool_node_size" {
   type    = string
   default = "Standard_B2ms"
 }
@@ -48,4 +41,8 @@ variable "namespaces" {
 variable "primary_domain_name" {
   type = string
   default = "amand.dev"
+}
+
+variable "tags" {
+  type = map(string)
 }
