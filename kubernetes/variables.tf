@@ -1,3 +1,8 @@
+variable "create" {
+  type = boolean
+  default = false
+}
+  
 variable "location" {
   type    = string
   default = "uksouth"
