@@ -8,5 +8,5 @@ resource "azurerm_dns_cname_record" "test" {
   resource_group_name = var.rg_name
   ttl                 = var.ttl
   record              = var.target
-  tags = var.tags
+  tags                = var.tags
 }

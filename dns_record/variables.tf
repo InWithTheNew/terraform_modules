@@ -20,6 +20,6 @@ variable "target" {
 }
 
 variable "ttl" {
-  type = number
+  type    = number
   default = 300
 }
